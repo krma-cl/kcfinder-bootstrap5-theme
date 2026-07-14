@@ -1,0 +1,544 @@
+/* KCFinder Bootstrap 5 theme v0.1.0 | Bootstrap 5.3.8 | generated, do not edit */
+:root {
+  --kcf-primary: #0d6efd;
+  --kcf-primary-rgb: 13, 110, 253;
+  --kcf-body-color: #212529;
+  --kcf-body-bg: #f8f9fa;
+  --kcf-surface: #fff;
+  --kcf-surface-muted: #f8f9fa;
+  --kcf-border: #dee2e6;
+  --kcf-secondary-color: #6c757d;
+  --kcf-hover: #e9ecef;
+  --kcf-selected: #dbe9ff;
+  --kcf-selected-border: #7aaffe;
+  --kcf-radius: 0.375rem;
+  --kcf-radius-lg: 0.5rem;
+  --kcf-shadow-sm: 0 0.125rem 0.25rem rgba(33, 37, 41, 0.075);
+  --kcf-shadow: 0 0.5rem 1rem rgba(33, 37, 41, 0.15);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-width: 0;
+}
+
+body.kcf-bootstrap5 {
+  background: var(--kcf-body-bg);
+  color: var(--kcf-body-color);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--kcf-primary);
+}
+
+#all {
+  background: var(--kcf-body-bg);
+}
+
+#left {
+  padding: 0.5rem 0 0.5rem 0.5rem;
+}
+
+#right {
+  padding: 0 0.5rem 0.5rem 0.5rem;
+}
+
+#folders,
+#files {
+  margin: 0;
+  border: 1px solid var(--kcf-border);
+  border-radius: var(--kcf-radius-lg);
+  background: var(--kcf-surface);
+  box-shadow: var(--kcf-shadow-sm);
+}
+
+#folders {
+  padding: 0.5rem;
+}
+
+#files {
+  margin-right: 0;
+}
+
+#content {
+  padding: 0.25rem;
+}
+
+#resizer {
+  background: transparent;
+  width: 0.5rem;
+}
+
+#resizer:hover {
+  background: rgba(var(--kcf-primary-rgb), 0.12);
+}
+
+/* Toolbar: Bootstrap button-group appearance without altering KCFinder markup. */
+#toolbar {
+  padding: 0.5rem 0;
+  min-height: 3.25rem;
+}
+
+#toolbar > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+#toolbar a,
+#bs5FolderToggle {
+  display: inline-flex;
+  align-items: center;
+  float: none;
+  min-height: 2.25rem;
+  margin: 0;
+  padding: 0;
+  color: #6c757d;
+  background: var(--kcf-surface);
+  border: 1px solid var(--kcf-border);
+  border-radius: var(--kcf-radius);
+  box-shadow: var(--kcf-shadow-sm);
+  font: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+#toolbar a:hover,
+#toolbar a.hover,
+#bs5FolderToggle:hover {
+  color: #0d6efd;
+  background: #f0f6ff;
+  border-color: #92befe;
+}
+
+#toolbar a:focus-visible,
+#bs5FolderToggle:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(var(--kcf-primary-rgb), 0.25);
+}
+
+#toolbar a > span,
+#bs5FolderToggle > span {
+  display: block;
+  float: none;
+  padding: 0.45rem 0.75rem 0.45rem 2.15rem;
+  background-repeat: no-repeat;
+  background-position: 0.65rem center;
+}
+
+#toolbar a[href="kcact:upload"] span {
+  background-image: url(img/bi/cloud-arrow-up.svg);
+}
+
+#toolbar a[href="kcact:refresh"] span {
+  background-image: url(img/bi/arrow-clockwise.svg);
+}
+
+#toolbar a[href="kcact:settings"] span {
+  background-image: url(img/bi/gear.svg);
+}
+
+#toolbar a[href="kcact:maximize"] span {
+  background-image: url(img/bi/arrows-fullscreen.svg);
+}
+
+#toolbar a[href="kcact:about"] span {
+  background-image: url(img/bi/info-circle.svg);
+}
+
+#bs5FolderToggle {
+  display: none;
+  padding: 0.45rem 0.75rem;
+}
+
+#bs5FolderToggle > span {
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  margin-right: 0.45rem;
+  background-image: url(img/bi/layout-sidebar-inset.svg);
+  background-position: center;
+}
+
+#bs5FolderToggle b {
+  font-weight: 500;
+}
+
+#loading {
+  margin: 0 0 0 auto;
+  border: 0;
+  box-shadow: none;
+}
+
+/* Folder tree */
+div.folder {
+  margin-top: 0.15rem;
+  padding-top: 0;
+  white-space: nowrap;
+}
+
+div.folder a {
+  color: var(--kcf-body-color);
+  text-decoration: none;
+}
+
+span.folder {
+  display: inline-block;
+  min-height: 1.8rem;
+  padding: 0.25rem 0.5rem 0.25rem 1.75rem;
+  border: 1px solid transparent;
+  border-radius: var(--kcf-radius);
+  background-repeat: no-repeat;
+  background-position: 0.35rem center;
+  cursor: pointer;
+}
+
+span.current {
+  color: #0a58ca;
+  background-color: var(--kcf-selected);
+  background-image: url(img/tree/folder.png);
+  border-color: var(--kcf-selected-border);
+}
+
+span.regular {
+  background-image: url(img/tree/folder.png);
+}
+
+span.regular:hover,
+span.context,
+a.drag > span.folder {
+  background-color: var(--kcf-hover);
+  border-color: var(--kcf-border);
+}
+
+span.opened {
+  background-image: url(img/tree/minus.png);
+}
+
+span.closed {
+  background-image: url(img/tree/plus.png);
+}
+
+span.denied {
+  background-image: url(img/tree/denied.png);
+}
+
+/* Files */
+div.file {
+  margin: 0.25rem;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  border-radius: var(--kcf-radius-lg);
+  transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+div.file:hover {
+  color: var(--kcf-body-color);
+  background: var(--kcf-surface-muted);
+  border-color: var(--kcf-border);
+  box-shadow: var(--kcf-shadow-sm);
+}
+
+div.file .name {
+  height: auto;
+  min-height: 1.25rem;
+  margin-top: 0.4rem;
+  padding-bottom: 0;
+  color: var(--kcf-body-color);
+  font-weight: 600;
+}
+
+div.file .time, div.file .size, div.file .dimensions {
+  color: var(--kcf-secondary-color);
+  font-size: 0.75rem;
+}
+
+#files div.selected,
+#files div.selected:hover {
+  color: var(--kcf-body-color);
+  background: var(--kcf-selected);
+  border-color: var(--kcf-selected-border);
+  box-shadow: 0 0 0 0.2rem rgba(var(--kcf-primary-rgb), 0.12);
+}
+
+tr.file > td {
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--kcf-border);
+}
+
+tr.file:hover > td {
+  background: var(--kcf-surface-muted);
+}
+
+tr.selected > td,
+tr.selected:hover > td {
+  background: var(--kcf-selected);
+}
+
+tr.file td.name {
+  padding-left: 1.75rem;
+  background-position: 0.4rem center;
+}
+
+/* Settings and transform controls */
+#settings {
+  padding-bottom: 0.25rem;
+}
+
+#settings fieldset {
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--kcf-border);
+  border-radius: var(--kcf-radius);
+  background: var(--kcf-surface);
+}
+
+#settings legend {
+  float: none;
+  width: auto;
+  margin: 0;
+  padding: 0 0.25rem;
+  color: var(--kcf-secondary-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+#settings label {
+  cursor: pointer;
+}
+
+.tf-select .tf-selected,
+.tf-input,
+.tf-multiple,
+.tf-textarea,
+.tf-file .tf-info,
+.tf-radio,
+.tf-checkbox {
+  color: var(--kcf-body-color);
+  background: var(--kcf-surface);
+  border: 1px solid var(--kcf-border);
+  border-radius: var(--kcf-radius);
+  box-shadow: none;
+}
+
+.tf-input:focus,
+.tf-textarea:focus,
+.tf-select.tf-focused .tf-selected,
+.tf-file.tf-focused .tf-info {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(var(--kcf-primary-rgb), 0.25);
+}
+
+.tf-button,
+.tf-file .tf-button {
+  color: #fff;
+  background: #0d6efd;
+  border: 1px solid #0d6efd;
+  border-radius: var(--kcf-radius);
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.tf-button:hover,
+.tf-file .tf-button:hover {
+  background: #0c63e4;
+  border-color: #0c63e4;
+}
+
+/* jQuery UI dialogs styled as Bootstrap modals. */
+.ui-widget {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.ui-widget-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+}
+
+.ui-dialog {
+  padding: 0;
+  overflow: hidden;
+  color: var(--kcf-body-color);
+  background: var(--kcf-surface);
+  border: 1px solid rgba(0, 0, 0, 0.175);
+  border-radius: var(--kcf-radius-lg);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+.ui-dialog .ui-dialog-titlebar {
+  padding: 1rem;
+  color: var(--kcf-body-color);
+  background: var(--kcf-surface);
+  border: 0;
+  border-bottom: 1px solid var(--kcf-border);
+  border-radius: 0;
+}
+
+.ui-dialog .ui-dialog-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.ui-dialog .ui-dialog-content {
+  padding: 1rem;
+  color: var(--kcf-body-color);
+  background: var(--kcf-surface);
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+  margin: 0;
+  padding: 0.75rem;
+  background: var(--kcf-surface);
+  border-top: 1px solid var(--kcf-border);
+}
+
+.ui-dialog .ui-dialog-buttonpane button {
+  margin: 0 0 0 0.5rem;
+  padding: 0.45rem 0.8rem;
+  color: #fff;
+  background: #0d6efd;
+  border: 1px solid #0d6efd;
+  border-radius: var(--kcf-radius);
+  font-weight: 500;
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+  right: 0.75rem;
+  top: 50%;
+  margin-top: -0.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 0;
+  background: transparent;
+  opacity: 0.6;
+}
+
+.ui-dialog .ui-dialog-titlebar-close:hover {
+  opacity: 1;
+}
+
+/* Context menu */
+#menu .ui-menu {
+  padding: 0.35rem;
+  background: var(--kcf-surface);
+  border: 1px solid var(--kcf-border);
+  border-radius: var(--kcf-radius);
+  box-shadow: var(--kcf-shadow);
+}
+
+#menu .list a,
+#menu .list a.ui-state-focus {
+  margin: 0;
+  padding: 0.45rem 0.75rem;
+  color: var(--kcf-body-color);
+  border: 0;
+  border-radius: 0.25rem;
+}
+
+#menu .list a:hover {
+  color: #fff;
+  background: #0d6efd;
+  box-shadow: none;
+}
+
+#menu .ui-menu a span {
+  padding-left: 1.5rem;
+  background-repeat: no-repeat;
+  background-position: left center;
+  white-space: nowrap;
+}
+
+#status {
+  color: var(--kcf-secondary-color);
+  background: var(--kcf-surface);
+  border-top: 1px solid var(--kcf-border);
+}
+
+.about {
+  text-align: center;
+}
+
+.about div.head {
+  padding: 0.25rem 0 0.75rem;
+  font-weight: 700;
+}
+
+.about div.head a {
+  padding-left: 1.75rem;
+  background: url(img/kcf_logo.png) no-repeat left center;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 767.98px) {
+  body.kcf-bootstrap5 {
+    overflow-x: hidden;
+  }
+  #resizer {
+    display: none !important;
+  }
+  #right {
+    left: 0 !important;
+    width: 100% !important;
+    padding: 0 0.5rem 0.5rem;
+  }
+  #left {
+    position: fixed !important;
+    z-index: 1200;
+    top: 0 !important;
+    bottom: 0;
+    left: 0 !important;
+    width: min(84vw, 320px) !important;
+    height: 100vh !important;
+    padding: 0.5rem;
+    background: var(--kcf-body-bg);
+    box-shadow: var(--kcf-shadow);
+    transform: translateX(-105%);
+    transition: transform 0.2s ease;
+  }
+  body.bs5-folders-open #left {
+    transform: translateX(0);
+  }
+  #folders {
+    height: calc(100vh - 1rem) !important;
+  }
+  #bs5FolderToggle {
+    display: inline-flex;
+  }
+  #toolbar a > span {
+    width: 2.25rem;
+    overflow: hidden;
+    padding-left: 2.15rem;
+    padding-right: 0;
+    white-space: nowrap;
+  }
+  #toolbar a[href="kcact:upload"] > span {
+    width: auto;
+    padding-right: 0.75rem;
+  }
+  #settings {
+    overflow-x: auto;
+  }
+  #files {
+    width: auto !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
