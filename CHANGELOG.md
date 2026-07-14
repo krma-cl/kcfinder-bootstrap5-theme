@@ -4,5 +4,6 @@
 
 - Primera versión del tema Bootstrap 5.
 - Barra de herramientas, árbol, archivos, formularios, menús y diálogos renovados.
+- Alineación precisa de iconos, tarjetas y nombres largos sin superposiciones.
 - Panel de carpetas adaptable para dispositivos móviles.
 - Distribución autónoma y compilación reproducible con Bootstrap 5.3.8.
