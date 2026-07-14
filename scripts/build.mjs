@@ -15,8 +15,11 @@ await cp(resolve(root, "vendor/kcfinder/02.transForm.css"), resolve(dist, "02.tr
 await cp(resolve(root, "vendor/kcfinder/img"), resolve(dist, "img"), { recursive: true });
 await mkdir(resolve(dist, "img/bi"), { recursive: true });
 for (const icon of [
-  "arrows-fullscreen", "arrow-clockwise", "cloud-arrow-up", "folder2-open",
-  "gear", "info-circle", "layout-sidebar-inset"
+  "arrow-clockwise", "arrows-fullscreen", "arrows-move", "check2-square",
+  "clipboard", "clipboard-plus", "clipboard-x", "cloud-arrow-up", "copy",
+  "crop", "dash-square", "download", "eye", "folder-plus", "folder-x",
+  "folder2", "folder2-open", "gear", "info-circle", "layout-sidebar-inset",
+  "pencil-square", "plus-square", "trash", "x-lg"
 ]) {
   await cp(
     resolve(root, `node_modules/bootstrap-icons/icons/${icon}.svg`),

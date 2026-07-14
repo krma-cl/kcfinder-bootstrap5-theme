@@ -8,6 +8,10 @@ const required = [
   "css.php",
   "js.php",
   "init.js",
+  "img/bi/clipboard.svg",
+  "img/bi/folder2.svg",
+  "img/bi/trash.svg",
+  "img/bi/x-lg.svg",
   "img/files/big/_.png",
   "img/files/small/_.png"
 ];
