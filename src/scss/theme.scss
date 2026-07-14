@@ -74,7 +74,7 @@ a { color: var(--kcf-primary); }
 #resizer:hover { background: rgba(var(--kcf-primary-rgb), .12); }
 
 /* Toolbar: Bootstrap button-group appearance without altering KCFinder markup. */
-#toolbar { padding: .5rem 0; min-height: 3.25rem; font-size: 13px; }
+#toolbar { box-sizing: content-box; padding: .5rem 0; min-height: 3.25rem; font-size: 13px; }
 #toolbar > div { display: flex; align-items: center; flex-wrap: wrap; gap: .375rem; }
 #toolbar a,
 #bs5FolderToggle {
