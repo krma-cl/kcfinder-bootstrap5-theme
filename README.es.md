@@ -2,7 +2,7 @@
 
 [Read in English](README.md)
 
-Tema Bootstrap 5 independiente e instalable para [KCFinder Resurrected](https://github.com/DevCrh/kcfinder-Resurrected). KCFinder Resurrected continúa el proyecto archivado [sunhater/kcfinder](https://github.com/sunhater/kcfinder), creado originalmente por Pavel Tzonkov.
+Tema Bootstrap 5 independiente e instalable para [KCFinder Resurrected](https://github.com/krma-cl/kcfinder-Resurrected). KCFinder Resurrected continúa el proyecto archivado [sunhater/kcfinder](https://github.com/sunhater/kcfinder), creado originalmente por Pavel Tzonkov.
 
 Este repositorio es un proyecto comunitario. No es un proyecto oficial de Bootstrap y no reemplaza ni modifica el núcleo de KCFinder.
 
@@ -22,6 +22,8 @@ Este repositorio es un proyecto comunitario. No es un proyecto oficial de Bootst
 - Versiones actuales de Chrome, Edge y Firefox. Safari debería funcionar, pero todavía no forma parte de la prueba habitual.
 
 El tema no cambia los requisitos PHP, autenticación, uploads, permisos ni configuración de seguridad de KCFinder.
+
+En versiones actuales de KCFinder Resurrected, el tema reutiliza el panel móvil y el manejo de foco provistos por el núcleo. Para instalaciones 4.x anteriores conserva un control compatible propio, evitando que una actualización visual obligue a actualizar primero el servidor.
 
 ## Instalación
 
@@ -136,7 +138,7 @@ El tema utiliza versionado semántico independiente de KCFinder. Las versiones d
 
 ## Origen y créditos
 
-- [KCFinder Resurrected](https://github.com/DevCrh/kcfinder-Resurrected), mantenido por DevCrh.
+- [KCFinder Resurrected](https://github.com/krma-cl/kcfinder-Resurrected), mantenido por krma-cl.
 - [KCFinder](https://github.com/sunhater/kcfinder), creado originalmente por Pavel Tzonkov y actualmente archivado.
 - [Bootstrap](https://github.com/twbs/bootstrap) y [Bootstrap Icons](https://github.com/twbs/icons), mantenidos por el equipo de Bootstrap.
 
