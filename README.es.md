@@ -142,6 +142,10 @@ El tema utiliza versionado semántico independiente de KCFinder. Las versiones d
 - [KCFinder](https://github.com/sunhater/kcfinder), creado originalmente por Pavel Tzonkov y actualmente archivado.
 - [Bootstrap](https://github.com/twbs/bootstrap) y [Bootstrap Icons](https://github.com/twbs/icons), mantenidos por el equipo de Bootstrap.
 
+## Mantenimiento y comunidad
+
+Este tema oficial de KCFinder es mantenido por [KRMA](https://krma.cl) junto con su comunidad de usuarios y colaboradores. KRMA aporta desarrollo, coordinación e infraestructura para asegurar la continuidad del proyecto.
+
 ## Licencia
 
 El tema se distribuye bajo `GPL-3.0-or-later OR LGPL-3.0-or-later`, igual que la elección de licencia de KCFinder. Bootstrap y Bootstrap Icons utilizan la licencia MIT. Consulta [LICENSE](LICENSE), los textos completos en [`licenses`](licenses) y [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
