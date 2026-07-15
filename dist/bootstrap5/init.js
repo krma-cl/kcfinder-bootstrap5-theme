@@ -9,11 +9,16 @@
 
     function closeFolders() {
         document.body.classList.remove("bs5-folders-open");
+        document.body.classList.remove("folders-drawer-open");
+    }
+
+    function hasCoreResponsiveController() {
+        return document.getElementById("folderToggle") !== null;
     }
 
     function installFolderToggle() {
         var toolbar = document.querySelector("#toolbar > div");
-        if (!toolbar || document.getElementById("bs5FolderToggle")) return;
+        if (hasCoreResponsiveController() || !toolbar || document.getElementById("bs5FolderToggle")) return;
 
         var button = document.createElement("button");
         button.id = "bs5FolderToggle";
@@ -28,6 +33,8 @@
     }
 
     function applyResponsiveLayout() {
+        if (hasCoreResponsiveController()) return;
+
         if (!isMobile()) {
             closeFolders();
             return;
@@ -55,6 +62,8 @@
         applyResponsiveLayout();
 
         document.addEventListener("click", function(event) {
+            if (hasCoreResponsiveController()) return;
+
             var toggle = event.target.closest("#bs5FolderToggle");
             if (toggle) {
                 event.preventDefault();
