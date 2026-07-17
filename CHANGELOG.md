@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.0 - 2026-07-17
+
+- Paquete Composer oficial `krma-cl/kcfinder-bootstrap5-theme`.
+- Archivos `VERSION` y `manifest.json` dentro de la distribución.
+- Manifiesto reproducible con versiones de Bootstrap e integridad SHA-256 de
+  cada archivo instalable.
+
 ## 0.2.0 - 2026-07-17
 
 - Presentación Bootstrap 5 para la búsqueda optativa por nombres incluida en el núcleo.

@@ -34,6 +34,17 @@ When the optional KCFinder name search is enabled in `conf/config.local.php`, th
 
 Download a release, or clone this repository and use the already-built `dist/bootstrap5` directory.
 
+Composer is also supported:
+
+```bash
+composer require krma-cl/kcfinder-bootstrap5-theme:^0.3
+```
+
+Copy
+`vendor/krma-cl/kcfinder-bootstrap5-theme/dist/bootstrap5` into the KCFinder
+`themes` directory. The Laravel adapter's asset command can automate the
+application-side publication workflow.
+
 ### 2. Copy the production directory
 
 Copy the complete directory:
@@ -138,6 +149,8 @@ The second command confirms that the committed distribution matches the source. 
 ## Versioning
 
 The theme follows Semantic Versioning independently from KCFinder. Bootstrap and Bootstrap Icons versions are pinned in `package.json` and recorded in the changelog.
+Every distribution includes `VERSION` plus `manifest.json`, with the theme,
+Bootstrap and Bootstrap Icons versions and SHA-256 hashes for installed files.
 
 ## Project lineage and credits
 

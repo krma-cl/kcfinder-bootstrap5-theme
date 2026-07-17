@@ -1,0 +1,30 @@
+{
+  "name": "krma-cl/kcfinder-bootstrap5-theme",
+  "description": "Bootstrap 5 theme for KCFinder Resurrected.",
+  "type": "library",
+  "license": [
+    "GPL-3.0-or-later",
+    "LGPL-3.0-or-later"
+  ],
+  "keywords": [
+    "bootstrap",
+    "file-manager",
+    "kcfinder",
+    "theme"
+  ],
+  "homepage": "https://github.com/krma-cl/kcfinder-bootstrap5-theme",
+  "support": {
+    "issues": "https://github.com/krma-cl/kcfinder-bootstrap5-theme/issues",
+    "source": "https://github.com/krma-cl/kcfinder-bootstrap5-theme"
+  },
+  "suggest": {
+    "krma-cl/kcfinder": "KCFinder Resurrected core package.",
+    "krma-cl/kcfinder-laravel": "Optional official Laravel integration."
+  },
+  "archive": {
+    "exclude": [
+      "/node_modules",
+      "/vendor"
+    ]
+  }
+}
