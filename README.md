@@ -11,19 +11,22 @@ This repository is a community project. It is not an official Bootstrap project 
 - Bootstrap 5 visual language without loading Bootstrap from a CDN.
 - Local Bootstrap Icons for toolbars, folders, menus, dialogs and form controls.
 - Responsive folder panel for narrow screens.
+- Styled optional folder and file name search provided by compatible KCFinder versions.
 - Refined thumbnail and list views.
 - Consistent radio buttons, checkboxes and language selector while preserving KCFinder's existing transForm behavior.
 - Self-contained production package: PHP, Node.js and Composer dependencies are not added to KCFinder.
 
 ## Compatibility
 
-- KCFinder Resurrected 4.x.
+- KCFinder Resurrected 4.x; the optional name search requires 4.7 or newer.
 - Bootstrap 5.3.8 design tokens and Bootstrap Icons 1.13.1.
 - Current versions of Chrome, Edge and Firefox. Safari should work but is not yet part of the regular test pass.
 
 The theme does not change KCFinder's PHP requirements, authentication, uploads, permissions or security configuration.
 
 On current KCFinder Resurrected versions, the theme reuses the folder drawer and focus management provided by the core. A compatible fallback remains available for earlier 4.x installations, so a visual theme update does not force a server-side upgrade first.
+
+When the optional KCFinder name search is enabled in `conf/config.local.php`, the theme automatically styles its field, progress text, matches and result counts. Search execution and limits remain core configuration; the theme does not scan files itself.
 
 ## Install
 

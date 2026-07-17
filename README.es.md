@@ -11,19 +11,22 @@ Este repositorio es un proyecto comunitario. No es un proyecto oficial de Bootst
 - Apariencia Bootstrap 5 sin cargar Bootstrap desde un CDN.
 - Bootstrap Icons locales para barras, carpetas, menús, diálogos y formularios.
 - Panel de carpetas adaptable para pantallas estrechas.
+- Presentación de la búsqueda optativa por nombres de carpetas y archivos incluida en versiones compatibles de KCFinder.
 - Vistas de miniaturas y lista refinadas.
 - Radios, checkbox y selector de idioma consistentes, conservando el funcionamiento existente de transForm.
 - Distribución autónoma: no agrega dependencias de PHP, Node.js o Composer a KCFinder en producción.
 
 ## Compatibilidad
 
-- KCFinder Resurrected 4.x.
+- KCFinder Resurrected 4.x; la búsqueda optativa por nombres requiere 4.7 o superior.
 - Tokens de Bootstrap 5.3.8 y Bootstrap Icons 1.13.1.
 - Versiones actuales de Chrome, Edge y Firefox. Safari debería funcionar, pero todavía no forma parte de la prueba habitual.
 
 El tema no cambia los requisitos PHP, autenticación, uploads, permisos ni configuración de seguridad de KCFinder.
 
 En versiones actuales de KCFinder Resurrected, el tema reutiliza el panel móvil y el manejo de foco provistos por el núcleo. Para instalaciones 4.x anteriores conserva un control compatible propio, evitando que una actualización visual obligue a actualizar primero el servidor.
+
+Cuando la búsqueda optativa de KCFinder está habilitada en `conf/config.local.php`, el tema adapta automáticamente el campo, el estado, las coincidencias y los contadores. La ejecución y sus límites continúan siendo configuración del núcleo; el tema no recorre archivos por sí mismo.
 
 ## Instalación
 

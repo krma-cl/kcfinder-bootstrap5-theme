@@ -49,7 +49,7 @@ a {
 }
 
 #right {
-  padding: 0 0.5rem 0.5rem 0.5rem;
+  padding: 0 0.5rem 0.5rem 0;
 }
 
 #folders,
@@ -62,6 +62,7 @@ a {
 }
 
 #folders {
+  margin-right: 0.5rem;
   padding: 0.5rem;
 }
 
@@ -71,6 +72,95 @@ a {
 
 #content {
   padding: 0.25rem;
+}
+
+#folderSearch {
+  position: relative;
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+#folderSearch::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: calc(0.65rem + 2px);
+  left: 0.75rem;
+  width: 16px;
+  height: 16px;
+  background-color: var(--kcf-secondary-color);
+  pointer-events: none;
+  -webkit-mask: url(img/bi/search.svg) center/contain no-repeat;
+  mask: url(img/bi/search.svg) center/contain no-repeat;
+}
+
+#folderSearchInput {
+  width: 100%;
+  height: 34px;
+  min-height: 34px;
+  padding: 0.45rem 2.5rem 0.45rem 2.25rem;
+  color: var(--kcf-body-color);
+  background: var(--kcf-surface);
+  border: 1px solid var(--kcf-border);
+  border-radius: var(--kcf-radius);
+  box-shadow: var(--kcf-shadow-sm);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+  font-size: 13px;
+}
+
+#folderSearchInput::-webkit-search-cancel-button {
+  display: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+#folderSearchInput::-ms-clear,
+#folderSearchInput::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+#folderSearchInput:focus {
+  outline: 0;
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.2rem rgba(var(--kcf-primary-rgb), 0.2);
+}
+
+#folderSearchClear {
+  top: 2px;
+  right: 4px;
+  width: 30px;
+  height: 30px;
+  color: var(--kcf-secondary-color);
+  border-radius: var(--kcf-radius);
+  font-size: 20px;
+  line-height: 1;
+}
+
+#folderSearchClear:hover {
+  color: var(--kcf-body-color);
+  background: var(--kcf-hover);
+}
+
+#folderSearchStatus {
+  padding: 0.25rem 0.25rem 0;
+  color: var(--kcf-secondary-color);
+  font-size: 11px;
+}
+
+#folders a.search-match > span.folder {
+  color: #0a58ca;
+}
+
+#folders .search-file-count {
+  color: #fff;
+  background: #0d6efd;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+#folders .search-empty {
+  color: var(--kcf-secondary-color);
 }
 
 #resizer {
@@ -542,7 +632,7 @@ tr.file td.name {
 }
 
 #settings .tf-select {
-  margin: 7px 8px 6px 0;
+  margin: 10px 8px 6px 0;
 }
 
 .tf-select .tf-selected {
@@ -665,6 +755,10 @@ tr.file td.name {
   border: 1px solid #0d6efd;
   border-radius: var(--kcf-radius);
   font-weight: 500;
+}
+
+.ui-dialog .ui-dialog-buttonpane .ui-button .ui-icon {
+  filter: brightness(2);
 }
 
 .ui-dialog .ui-dialog-titlebar-close {
@@ -862,6 +956,9 @@ tr.file td.name {
     transform: translateX(0);
   }
   #folders {
+    margin-right: 0;
+  }
+  body:not(.search-enabled) #folders {
     height: calc(100vh - 1rem) !important;
   }
   #folderToggle,
