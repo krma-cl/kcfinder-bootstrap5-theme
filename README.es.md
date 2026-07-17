@@ -34,6 +34,17 @@ Cuando la búsqueda optativa de KCFinder está habilitada en `conf/config.local.
 
 Descarga una publicación o clona este repositorio y utiliza la carpeta ya compilada `dist/bootstrap5`.
 
+También puede instalarse mediante Composer:
+
+```bash
+composer require krma-cl/kcfinder-bootstrap5-theme:^0.3
+```
+
+Copia
+`vendor/krma-cl/kcfinder-bootstrap5-theme/dist/bootstrap5` dentro de la carpeta
+`themes` de KCFinder. El comando de assets del adaptador Laravel puede
+automatizar la publicación dentro de la aplicación.
+
 ### 2. Copiar la distribución
 
 Copia la carpeta completa:
@@ -138,6 +149,9 @@ El segundo comando confirma que la distribución versionada corresponde al códi
 ## Versionado
 
 El tema utiliza versionado semántico independiente de KCFinder. Las versiones de Bootstrap y Bootstrap Icons se fijan en `package.json` y se registran en el changelog.
+Cada distribución incluye `VERSION` y `manifest.json`, con las versiones del
+tema, Bootstrap y Bootstrap Icons, además de hashes SHA-256 para los archivos
+instalables.
 
 ## Origen y créditos
 
