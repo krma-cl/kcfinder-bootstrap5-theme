@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.1 - 2026-07-17
+
+- Publicador PHP reutilizable y comando Composer `kcfinder-theme-install`.
+- Instalación atómica dentro de un directorio `themes` administrado por la
+  aplicación, sin modificar el paquete del núcleo.
+- Entradas CSS y JavaScript compatibles con un núcleo montado externamente por
+  Laravel o Symfony.
+
 ## 0.3.0 - 2026-07-17
 
 - Paquete Composer oficial `krma-cl/kcfinder-bootstrap5-theme`.

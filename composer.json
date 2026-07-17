@@ -2,6 +2,17 @@
   "name": "krma-cl/kcfinder-bootstrap5-theme",
   "description": "Bootstrap 5 theme for KCFinder Resurrected.",
   "type": "library",
+  "require": {
+    "php": "^8.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Krma\\KCFinder\\Bootstrap5Theme\\": "src/"
+    }
+  },
+  "bin": [
+    "bin/kcfinder-theme-install"
+  ],
   "license": [
     "GPL-3.0-or-later",
     "LGPL-3.0-or-later"
@@ -26,5 +37,8 @@
       "/node_modules",
       "/vendor"
     ]
+  },
+  "scripts": {
+    "check": "@php scripts/check-publisher.php"
   }
 }

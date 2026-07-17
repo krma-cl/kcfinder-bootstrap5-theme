@@ -1,14 +1,14 @@
 {
   "name": "krma-cl/kcfinder-bootstrap5-theme",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "bootstrap": "5.3.8",
   "bootstrapIcons": "1.13.1",
   "files": {
     "01.ui.css": "816e4c995c9cd40e2e64bf62dbea6d3af4223e987de95b11ec88340702e1a115",
     "02.transForm.css": "b5b4329a9ba317fbbbb4d6c9fc0e5b8cf1ac7d133c7de18337aef83aac354c10",
-    "03.bootstrap.css": "9c72b94ca27ec5ee8389b239a8b5eb69ceee598c46102e29f1a223ac64650a75",
-    "VERSION": "d915cc95d6ca8f47ae297713ed46d4e5c5d99ddd29fc3c61e263bdf305f2b5b0",
-    "css.php": "f616467c1ae079ea71b756e74c6c4768c4147b14e6bccbbbfa5c7eb29574f1d9",
+    "03.bootstrap.css": "2b0632bfbe7332cad7bb90d7b4a685501a8bace5a7e76fdb3af19ba3ce697032",
+    "VERSION": "79e3f22ca37c7fdf4c29ae3648d6b008c3cb6547260a453409275470919dc674",
+    "css.php": "6211ab5f46fe866f2cb421eb1c751685ceb621142ff89a690e16e37916705620",
     "img/bg_transparent.png": "78d178626ef709362b2befa0fcde4ba4dcd33c2d26a558afa0b989462bfc7369",
     "img/bi/arrow-clockwise.svg": "63a5cf9bd5c8e6b73ce6030a1c812a09ab97be8b1ff5aa0d5b33751bc415170c",
     "img/bi/arrows-fullscreen.svg": "2d67bc427f2e766795ec029cd2ef24b3ebbd306ff76ae7297508da7b6a6081bf",
@@ -214,6 +214,6 @@
     "img/ui-icons_cc0000_256x240.png": "a1a653a7a5c4e035d78aca9d2d9c074496a2c4e092d93be903de643e6a03a1d9",
     "img/ui-icons_ffffff_256x240.png": "dd4f2cf82225df51de9bc86041d73935d352b0501712acf216d1097a586ff6d3",
     "init.js": "6e310dae028a429423b71857561633fd8180dbb2fac2eaed3ec3b5bceceea31e",
-    "js.php": "bcf06b115837437e76c057c55d61e1c4bdb9630c70852b35af810ef9acf4f970"
+    "js.php": "4ca8fad46261a515d87fc5e7d8a5b9374c71444da81b53e669b3d06831b205b4"
   }
 }
