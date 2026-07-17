@@ -45,6 +45,16 @@ Copy
 `themes` directory. The Laravel adapter's asset command can automate the
 application-side publication workflow.
 
+For standalone Composer installations, publish it without editing either
+package under `vendor`:
+
+```bash
+vendor/bin/kcfinder-theme-install --target=/path/to/public/kcfinder/themes
+```
+
+Use `--force` for an intentional update. Publication is staged and then
+replaced atomically.
+
 ### 2. Copy the production directory
 
 Copy the complete directory:

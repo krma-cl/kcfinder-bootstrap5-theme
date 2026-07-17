@@ -38,6 +38,8 @@ jobs:
           npm run check
           git diff --exit-code -- dist/bootstrap5
           composer validate --strict
+          composer install --no-interaction --no-progress
+          composer check
 
       - name: Package installable theme
         shell: bash

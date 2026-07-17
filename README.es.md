@@ -45,6 +45,16 @@ Copia
 `themes` de KCFinder. El comando de assets del adaptador Laravel puede
 automatizar la publicación dentro de la aplicación.
 
+En una instalación standalone mediante Composer, publícalo sin editar ninguno
+de los dos paquetes dentro de `vendor`:
+
+```bash
+vendor/bin/kcfinder-theme-install --target=/ruta/publica/kcfinder/themes
+```
+
+Usa `--force` al actualizar deliberadamente. La publicación se prepara en un
+directorio temporal y se reemplaza de forma atómica.
+
 ### 2. Copiar la distribución
 
 Copia la carpeta completa:
