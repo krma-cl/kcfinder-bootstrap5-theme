@@ -13,8 +13,10 @@ const version = packageMetadata.version;
 await rm(dist, { recursive: true, force: true });
 await mkdir(dist, { recursive: true });
 
-await cp(resolve(root, "vendor/kcfinder/01.ui.css"), resolve(dist, "01.ui.css"));
-await cp(resolve(root, "vendor/kcfinder/02.transForm.css"), resolve(dist, "02.transForm.css"));
+for (const stylesheet of ["01.ui.css", "02.transForm.css"]) {
+  const content = await readFile(resolve(root, `vendor/kcfinder/${stylesheet}`), "utf8");
+  await writeFile(resolve(dist, stylesheet), content.replace(/\r\n/g, "\n"), "utf8");
+}
 await cp(resolve(root, "vendor/kcfinder/img"), resolve(dist, "img"), { recursive: true });
 await mkdir(resolve(dist, "img/bi"), { recursive: true });
 for (const icon of [
