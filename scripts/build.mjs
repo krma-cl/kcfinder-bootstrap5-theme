@@ -19,7 +19,7 @@ for (const icon of [
   "clipboard", "clipboard-plus", "clipboard-x", "cloud-arrow-up", "copy",
   "crop", "dash-square", "download", "eye", "folder-plus", "folder-x",
   "folder2", "folder2-open", "gear", "info-circle", "layout-sidebar-inset",
-  "pencil-square", "plus-square", "trash", "x-lg"
+  "pencil-square", "plus-square", "search", "trash", "x-lg"
 ]) {
   await cp(
     resolve(root, `node_modules/bootstrap-icons/icons/${icon}.svg`),

@@ -1,0 +1,64 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Validate semantic version tag
+        shell: bash
+        run: |
+          if [[ ! "${GITHUB_REF_NAME}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z][0-9A-Za-z.-]*)?$ ]]; then
+            echo "Release tags must follow vX.Y.Z or vX.Y.Z-suffix." >&2
+            exit 1
+          fi
+
+      - name: Check out tagged source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Build and verify distribution
+        run: |
+          npm ci
+          npm run check
+          git diff --exit-code -- dist/bootstrap5
+
+      - name: Package installable theme
+        shell: bash
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          mkdir -p release
+          (
+            cd dist
+            zip -X -r "../release/kcfinder-bootstrap5-theme-${VERSION}.zip" bootstrap5
+          )
+          (
+            cd release
+            sha256sum "kcfinder-bootstrap5-theme-${VERSION}.zip" > "kcfinder-bootstrap5-theme-${VERSION}.zip.sha256"
+          )
+
+      - name: Publish GitHub release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          OPTIONS=(--repo "$GITHUB_REPOSITORY" --title "KCFinder Bootstrap 5 Theme ${GITHUB_REF_NAME}" --generate-notes)
+          if [[ "$GITHUB_REF_NAME" == *-* ]]; then
+            OPTIONS+=(--prerelease)
+          fi
+          gh release create "$GITHUB_REF_NAME" release/* "${OPTIONS[@]}"
